@@ -47,7 +47,7 @@ jobs:
       # Step 6: Upload build files to S3 and delete old files
       - name: Deploy to S3
         run: |
-          aws s3 sync build/ s3://manuelac-bad-jokes-generator --delete
+          aws s3 sync build/ s3://codigo-facilito-bucket --delete
 
       # Step 7: Clear CloudFront cache to force new files to be fetched
       - name: Invalidate CloudFront cache
